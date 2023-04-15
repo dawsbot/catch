@@ -46,6 +46,7 @@ Now we don't!
 <summary><b>⛓️ Q: What chains does this support?</b></summary>
 <p>🅰️ All Ethereum chains can be easily adopted by forking this repo and deploying a new `CatchManager`. That said, the easier way is to add in high-volume cache heuristics via the `cacheableConfig` directly in the typesript codebase. (more information coming soon)</p>
 </details>
+<details>
 <summary><b>♻️ Q: Does this affect the envionment?</b></summary>
 <p>🅰️ YES. By returning cached results, we save networking bandwidth and decrease energy usage</p>
 </details>
@@ -110,7 +111,7 @@ The cache rules are determined by the deployed `CatchManager` contracts deployed
 
 <br/>
 
-To a new caching rule, simply call `pushCatchConfig` on the smart-contract and include the following data:
+To add a new caching rule, simply call `pushCatchConfig` on the smart-contract and include the following data:
 
 - `_to`: What smart-contract address should this rule apply to?
 - `_functionSignature`: What function should this rule apply to?
@@ -127,7 +128,7 @@ const cacheIfEqualTo =
 await contract.pushCatchConfig(to, functionSignature, cacheIfEqualTo);
 ```
 
-In the future whenever someone wants the `CHILD_CHAIN_ID` from that address, it's served instantly from the cache!
+In the future whenever someone wants the `CHILD_CHAIN_ID` from that address, it's served instantly from the cache! This example is real and deployed live at https://polygonscan.com/address/0xCBBB04FDe79E40e98d6c49B539abd60858C7b525#readContract
 
 ## Extra Information
 
