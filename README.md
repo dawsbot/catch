@@ -50,16 +50,16 @@ Now we don't!
 <p>🅰️ YES. By returning cached results, we save networking bandwidth and decrease energy usage</p>
 </details>
 
+<br/>
+
 ## Smart-Contract Managers Deployed Across:
 
-- [Polygon mainnet](https://polygonscan.com/address/0xcbbb04fde79e40e98d6c49b539abd60858c7b525)
-- [Scroll](https://blockscout.scroll.io/address/0x70842AcB25e4381A24D489d6d3FB656C634f97eD)
+- [Scroll Alpha Testnet](https://blockscout.scroll.io/address/0x70842AcB25e4381A24D489d6d3FB656C634f97eD)
 - [Celo Alfajores Testnet](https://explorer.celo.org/alfajores/address/0x70842AcB25e4381A24D489d6d3FB656C634f97eD)
-- [Gnosis Chain](https://blockscout.com/xdai/mainnet/address/0x70842AcB25e4381A24D489d6d3FB656C634f97eD)
-- [Taiko Hackathon L2](https://l2explorer.hackathon.taiko.xyz/address/0x70842AcB25e4381A24D489d6d3FB656C634f97eD/contracts#address-tabs)
 - [Linea Testnet](https://explorer.goerli.linea.build/address/0x70842AcB25e4381A24D489d6d3FB656C634f97eD/transactions#address-tabs)
-  <!-- - [Scroll Alpha Testnet]() -->
-  <!-- - [Linea]() -->
+- [Taiko Hackathon L2](https://l2explorer.hackathon.taiko.xyz/address/0x70842AcB25e4381A24D489d6d3FB656C634f97eD/contracts#address-tabs)
+- [Gnosis Chain](https://blockscout.com/xdai/mainnet/address/0x70842AcB25e4381A24D489d6d3FB656C634f97eD)
+- [Polygon Mainnet](https://polygonscan.com/address/0xcbbb04fde79e40e98d6c49b539abd60858c7b525)
   <!-- - [Optimism]() -->
 
 ## Example Fetches
@@ -102,6 +102,35 @@ curl --location 'https://catch-rpc.vercel.app/api/rpc?rpc=https%253A%252F%252Ffr
 }'
 ```
 
+## Manager Solidity Info
+
+The cache rules are determined by the deployed `CatchManager` contracts deployed to every chain. Here is an example graphic of how the smart-contract works:
+
+![](public/smart-contract-explainer.png)
+
+<br/>
+
+To a new caching rule, simply call `pushCatchConfig` on the smart-contract and include the following data:
+
+- `_to`: What smart-contract address should this rule apply to?
+- `_functionSignature`: What function should this rule apply to?
+- `_cacheIfEqualTo`: What raw hex string if seen as a response should be applied forever?
+
+Here is an example:
+
+```ts
+const to = "0x7FFB3d637014488b63fb9858E279385685AFc1e2";
+const functionSignature = "CHILD_CHAIN_ID()";
+const cacheIfEqualTo =
+  "0x0000000000000000000000000000000000000000000000000000000000000089";
+
+await contract.pushCatchConfig(to, functionSignature, cacheIfEqualTo);
+```
+
+In the future whenever someone wants the `CHILD_CHAIN_ID` from that address, it's served instantly from the cache!
+
 ## Extra Information
 
 Solidity contract is viewable at https://github.com/dawsbot/catch-solidity
+
+##
