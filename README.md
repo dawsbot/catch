@@ -85,7 +85,7 @@ curl --location 'https://catch-rpc.vercel.app/api/eth?rpc=https%253A%252F%252Ffr
 Example mainnet fetch
 
 ```sh
-curl --location 'http://127.0.0.1:3001/api/rpc?rpc=https%253A%252F%252Ffree-eth-node.com%252Fapi%252Feth' \
+curl --location 'https://catch-rpc.vercel.app/api/rpc?rpc=https%253A%252F%252Ffree-eth-node.com%252Fapi%252Feth' \
 --header 'Content-Type: application/json' \
 --data '{
     "jsonrpc": "2.0",
