@@ -53,6 +53,7 @@ Now we don't!
 ## Smart-Contract Managers Deployed Across:
 
 - [Polygon mainnet](https://polygonscan.com/address/0xcbbb04fde79e40e98d6c49b539abd60858c7b525)
+- [Scroll](https://blockscout.scroll.io/address/0x70842AcB25e4381A24D489d6d3FB656C634f97eD)
 - [Celo Alfajores Testnet](https://explorer.celo.org/alfajores/address/0x70842AcB25e4381A24D489d6d3FB656C634f97eD)
 - [Gnosis Chain](https://blockscout.com/xdai/mainnet/address/0x70842AcB25e4381A24D489d6d3FB656C634f97eD)
 - [Taiko Hackathon L2](https://l2explorer.hackathon.taiko.xyz/address/0x70842AcB25e4381A24D489d6d3FB656C634f97eD/contracts#address-tabs)
@@ -65,7 +66,7 @@ Now we don't!
 Polygon fetch (cached thanks to the deployed smart-contract):
 
 ```sh
-curl --location 'http://127.0.0.1:3002/api/rpc?rpc=https%253A%252F%252Ffree-eth-node.com%252Fapi%252Fmatic&chainId=137' \
+curl --location 'https://catch-rpc.vercel.app/api/eth?rpc=https%253A%252F%252Ffree-eth-node.com%252Fapi%252Fmatic&chainId=137' \
 --header 'Content-Type: application/json' \
 --data '{
     "jsonrpc": "2.0",
