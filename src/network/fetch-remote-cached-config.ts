@@ -23,7 +23,7 @@ const liveContracts = {
   },
   "534353": {
     /* scroll alpha testnet */
-    contractAddress: "todo",
+    contractAddress: "0x70842AcB25e4381A24D489d6d3FB656C634f97eD",
     rpcUrl: "https://alpha-rpc.scroll.io/l2 ",
   },
   "59140": {

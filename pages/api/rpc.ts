@@ -127,7 +127,6 @@ export default async function handler(
     if (shouldResultBeCached) {
       console.log("set value in cache");
       cache.put(cacheKey, ethNodeResponse, ONE_MINUTE_IN_MS);
-      res.setHeader("Cache-Control", "s-maxage=86400");
     } else {
       console.log("value shoule NOT be cached");
     }
