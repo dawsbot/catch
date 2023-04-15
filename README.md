@@ -65,7 +65,7 @@ Now we don't!
 Polygon fetch (cached thanks to the deployed smart-contract):
 
 ```sh
-curl --location 'http://127.0.0.1:3002/api/rpc?rpc=https%253A%252F%252Ffree-eth-node.com%252Fapi%252Fmatic&chainId=137' \
+curl --location 'https://catch-rpc.vercel.app/api/rpc?rpc=https%253A%252F%252Ffree-eth-node.com%252Fapi%252Fmatic&chainId=137' \
 --header 'Content-Type: application/json' \
 --data '{
     "jsonrpc": "2.0",
@@ -84,7 +84,7 @@ curl --location 'http://127.0.0.1:3002/api/rpc?rpc=https%253A%252F%252Ffree-eth-
 Example mainnet fetch
 
 ```sh
-curl --location 'http://127.0.0.1:3001/api/rpc?rpc=https%253A%252F%252Ffree-eth-node.com%252Fapi%252Feth' \
+curl --location 'https://catch-rpc.vercel.app/api/rpc?rpc=https%253A%252F%252Ffree-eth-node.com%252Fapi%252Feth' \
 --header 'Content-Type: application/json' \
 --data '{
     "jsonrpc": "2.0",
