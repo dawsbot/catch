@@ -57,6 +57,7 @@ Now we don't!
 - [Celo Alfajores Testnet](https://explorer.celo.org/alfajores/address/0x70842AcB25e4381A24D489d6d3FB656C634f97eD)
 - [Gnosis Chain](https://blockscout.com/xdai/mainnet/address/0x70842AcB25e4381A24D489d6d3FB656C634f97eD)
 - [Taiko Hackathon L2](https://l2explorer.hackathon.taiko.xyz/address/0x70842AcB25e4381A24D489d6d3FB656C634f97eD/contracts#address-tabs)
+- [Linea Testnet](https://explorer.goerli.linea.build/address/0x70842AcB25e4381A24D489d6d3FB656C634f97eD/transactions#address-tabs)
   <!-- - [Scroll Alpha Testnet]() -->
   <!-- - [Linea]() -->
   <!-- - [Optimism]() -->

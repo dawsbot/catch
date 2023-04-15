@@ -28,7 +28,7 @@ const liveContracts = {
   },
   "59140": {
     /* linea testnet */
-    contractAddress: "todo",
+    contractAddress: "0x70842AcB25e4381A24D489d6d3FB656C634f97eD",
     rpcUrl: "https://rpc.goerli.linea.build",
   },
 };
